@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import ConfigurableGridLayout from 'themeproject/lib/components/ConfigurableGridLayout';
+  import ConfigurableGridLayout from 'Configurable-Layout/packages/ConfigurableGridLayout/src/ConfigurableGridLayout.vue';
 
   export default {
     components: {
