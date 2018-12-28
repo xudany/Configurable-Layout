@@ -2,11 +2,15 @@ import Vue from 'vue'
 import App from './App'
 import setRoute from '../../src/router.js';
 import ConfigurableGridLayout from '../../src/index.js'
+import ConfigurableAbsoluteLayout from '../../src/index.js'
+import ConfigurableLayout from '../../src/index.js'
 
 
 Vue.config.productionTip = false;
 
-Vue.use(ConfigurableGridLayout)
+Vue.use(ConfigurableGridLayout);
+Vue.use(ConfigurableAbsoluteLayout);
+Vue.use(ConfigurableLayout);
 
 async function initApp() {
 
@@ -16,7 +20,7 @@ async function initApp() {
   return new Vue({
     el: '#app',
     router,
-    components: { App },
+    components: {App},
     template: '<App/>'
   });
 }

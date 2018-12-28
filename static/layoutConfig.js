@@ -5,7 +5,9 @@ let configData = {
    * @type {Object}
    */
   "layoutConfig": {
-    // 网格布局
+    // 布局方式，可选参数：grid，absolute，默认为grid
+    "layoutType": "absolute",
+    // grid网格布局
     "gridLayoutConfig": {
       // 网格列数
       "colNum": 12,
@@ -63,7 +65,7 @@ let configData = {
       }
     },
     /**
-     * 布局位置的配置
+     * grid布局位置的配置
      *
      * @type {Object}
      * @property {number} x 项目的初始水平位置（放置在哪一列）
@@ -74,25 +76,59 @@ let configData = {
      * @property {string} component 项目渲染的组件
      * @property {string} url 项目渲染的组件所在路径
      * @property {string} name 项目名称
+     *
      */
-    // 典型门字型结构
-    "layout": [
-      {"x": 0, "y": 0, "w": 120, "h": 4, "i": "0", "component": "Mheader", "url": "components/Mheader", "name": "Header"},
-      {"x": 0, "y": 1, "w": 2, "h": 53.5, "i": "1", "component": "Menu", "url": "components/Menu", "name": "LeftAside"},
-      {"x": 2, "y": 1, "w": 8, "h": 53.5, "i": "2", "component": "Main", "url": "components/Main", "name": "Main"},
-      {"x": 10, "y": 1, "w": 2, "h": 53.5, "i": "3", "component": "ChangeRouter", "url": "components/ChangeRouter", "name": "RightAside"}
-    ],
-    // 上中下结构
+    // grid典型门字型结构
+    // "layout": [
+    //   {"x": 0, "y": 0, "w": 120, "h": 4, "i": "0", "component": "Mheader", "url": "components/Mheader", "name": "Header"},
+    //   {"x": 0, "y": 1, "w": 2, "h": 53.5, "i": "1", "component": "Menu", "url": "components/Menu", "name": "LeftAside"},
+    //   {"x": 2, "y": 1, "w": 8, "h": 53.5, "i": "2", "component": "Main", "url": "components/Main", "name": "Main"},
+    //   {"x": 10, "y": 1, "w": 2, "h": 53.5, "i": "3", "component": "ChangeRouter", "url": "components/ChangeRouter", "name": "RightAside"}
+    // ],
+    // grid上中下结构
     // "layout": [
     //   {"x": 0, "y": 0, "w": 120, "h": 4, "i": "0", "component": "Mheader", "url": "components/Mheader", "name": "Header"},
     //   {"x": 0, "y": 1, "w": 120, "h": 50, "i": "1", "component": "Main", "url": "components/Main", "name": "Main"},
     //   {"x": 0, "y": 2, "w": 120, "h": 4, "i": "2", "component": "Mfooter", "url": "components/Mfooter", "name": "Footer"}
     // ],
-    // 上左中结构
+    // grid上左中结构
     // "layout": [
     //   {"x": 0, "y": 0, "w": 120, "h": 4, "i": "0", "component": "Mheader", "url": "components/Mheader", "name": "Header"},
     //   {"x": 0, "y": 1, "w": 2, "h": 50, "i": "1", "component": "Menu", "url": "components/Menu", "name": "LeftAside"},
     //   {"x": 2, "y": 1, "w": 10, "h": 50, "i": "2", "component": "Main", "url": "components/Main", "name": "Main"}
+    // ],
+    /**
+     * absolute布局位置的配置
+     *
+     * @type {Object}
+     * @property {string} x 项目的初始水平位置（即css中的left）
+     * @property {string} y 项目的初始垂直位置（即css中的top）
+     * @property {string} w 项目的初始宽度
+     * @property {string} h 项目的初始高度
+     * @property {string} i 项目的唯一标识符
+     * @property {string} component 项目渲染的组件
+     * @property {string} url 项目渲染的组件所在路径
+     * @property {string} name 项目名称
+     *
+     */
+    // absolute典型门字型结构
+    "layout": [
+      {"x": "0", "y": "0", "w": "100%", "h": "7%", "i": "0", "component": "Mheader", "url": "components/Mheader", "name": "Header"},
+      {"x": "0", "y": "7.3%", "w": "17%", "h": "92.7%", "i": "1", "component": "Menu", "url": "components/LeftAside", "name": "LeftAside"},
+      {"x": "17.1%", "y": "7.3%", "w": "65.8%", "h": "92.7%", "i": "2", "component": "Main", "url": "components/Main", "name": "Main"},
+      {"x": "83%", "y": "7.3%", "w": "17%", "h": "92.7%", "i": "3", "component": "ChangeRouter", "url": "components/RightAside", "name": "RightAside"}
+    ],
+    // absolute上中下结构
+    // "layout": [
+    //   {"x": "0", "y": "0", "w": "100%", "h": "7%", "i": "0", "component": "Mheader", "url": "components/Mheader", "name": "Header"},
+    //   {"x": "0", "y": "7.3%", "w": "100%", "h": "83.9%", "i": "1", "component": "Main", "url": "components/Main", "name": "Main"},
+    //   {"x": "0", "y": "91.4%", "w": "100%", "h": "8.6%", "i": "2", "component": "Mfooter", "url": "components/Mfooter", "name": "Footer"}
+    // ],
+    // absolute上左中结构
+    // "layout": [
+    //   {"x": "0", "y": "0", "w": "100%", "h": "7%", "i": "0", "component": "Mheader", "url": "components/Mheader", "name": "Header"},
+    //   {"x": "0", "y": "7.3%", "w": "17%", "h": "92.7%", "i": "1", "component": "LeftAside", "url": "components/LeftAside", "name": "LeftAside"},
+    //   {"x": "17.1%", "y": "7.3%", "w": "92.8%", "h": "92.7%", "i": "2", "component": "Main", "url": "components/Main", "name": "Main"}
     // ],
     /**
      * 路由配置
@@ -113,33 +149,33 @@ let configData = {
     // 次级路由配置
     "routerList": [
       {
-        "name": "Coordinate",
-        "component": "Coordinate",
-        "url": "components/Coordinate",
+        "name": "Main",
+        "component": "Main",
+        "url": "components/Main",
         "type": "component"
       },
       {
-        "name": "MapMark",
-        "component": "MapMark",
-        "url": "components/MapMark",
+        "name": "Collection",
+        "component": "Collection",
+        "url": "components/Collection",
         "type": "component"
       },
       {
-        "name": "Measure",
-        "component": "Measure",
-        "url": "components/Measure",
+        "name": "LeftAside",
+        "component": "LeftAside",
+        "url": "components/LeftAside",
         "type": "component"
       },
       {
-        "name": "Bookmark",
-        "component": "Bookmark",
-        "url": "components/Bookmark",
+        "name": "RightAside",
+        "component": "RightAside",
+        "url": "components/RightAside",
         "type": "component"
       },
       {
-        "name": "Attributes",
-        "component": "Attributes",
-        "url": "components/Attributes",
+        "name": "Mheader",
+        "component": "Mheader",
+        "url": "components/Mheader",
         "type": "component"
       },
     ]

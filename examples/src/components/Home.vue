@@ -1,21 +1,20 @@
 <template>
-  <configurable-grid-layout></configurable-grid-layout>
+  <!--<configurable-grid-layout></configurable-grid-layout>-->
+  <!--<configurable-absolute-layout></configurable-absolute-layout>-->
+  <configurable-layout></configurable-layout>
 </template>
 
 <script>
-  // import VueGridLayout from './ConfigurableGridLayout';
-  // import {ConfigurableGridLayout} from '../../../src/index';
-  // import Vue from 'vue';
 
-  // Vue.use(ConfigurableGridLayout)
+  import ConfigurableLayout from "../../../packages/ConfigurableLayout/src/ConfigurableLayout";
   export default {
     name: "collection",
-    components: {
-
-    }
+    components: {ConfigurableLayout}
   }
 </script>
 
-<style scoped>
-
+<style>
+  body {
+    background-color: black;
+  }
 </style>

@@ -1,7 +1,11 @@
 import ConfigurableGridLayout from '../packages/ConfigurableGridLayout/index.js'
+import ConfigurableAbsoluteLayout from '../packages/ConfigurableAbsoluteLayout/index.js'
+import ConfigurableLayout from '../packages/ConfigurableLayout/index.js'
 
 const components = [
-  ConfigurableGridLayout
+  ConfigurableGridLayout,
+  ConfigurableAbsoluteLayout,
+  ConfigurableLayout
 ];
 
 const install = function (Vue) {
@@ -18,5 +22,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  ConfigurableGridLayout
+  ConfigurableGridLayout,
+  ConfigurableAbsoluteLayout,
+  ConfigurableLayout
 }
