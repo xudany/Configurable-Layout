@@ -39,7 +39,7 @@
 <script>
   import AbsoluteLayout from './AbsoluteLayout'
   import AbsoluteItem from './AbsoluteItem'
-  import configData from '../../../static/layoutConfig'
+  import configData from '../../ConfigData/index'
 
   export default {
     name: "ConfigurableAbsoluteLayout",

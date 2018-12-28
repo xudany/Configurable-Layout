@@ -2,7 +2,7 @@
   "name": "Configurable-Layout",
   "version": "1.0.24",
   "description": "A theme plugin",
-  "author": "xudaini <xudaini@ascs.tech>",
+  "author": "xudany <396062296@qq.com>",
   "private": false,
   "main": "src/index.js",
   "files": [
@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://xudaini@bitbucket.ascs.tech/scm/~xudaini/themeproject.git"
+    "url": "https://github.com/xudany/Configurable-Layout.git"
   },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

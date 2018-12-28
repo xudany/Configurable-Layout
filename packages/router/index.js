@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import {routeRegister} from './routerRegiester';
 import axios from 'axios';
-import configData from "../../static/layoutConfig.js"
+import configData from '../ConfigData/index'
 
 let infoUrl = '../../../static/routerList.json';
 

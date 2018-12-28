@@ -42,7 +42,7 @@
 
 <script>
   import VueGridLayout from 'vue-grid-layout';
-  import configData from '../../../static/layoutConfig'
+  import configData from '../../ConfigData/index'
 
   import axios from 'axios';
 

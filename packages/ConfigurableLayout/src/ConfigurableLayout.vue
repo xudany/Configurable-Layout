@@ -5,7 +5,7 @@
 <script>
   import ConfigurableGridLayout from '../../ConfigurableGridLayout/index.js'
   import ConfigurableAbsoluteLayout from '../../ConfigurableAbsoluteLayout/index.js'
-  import configData from '../../../static/layoutConfig'
+  import configData from '../../ConfigData/index'
 
   export default {
     name: "ConfigurableLayout",

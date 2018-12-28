@@ -4,7 +4,7 @@
 
 import axios from "axios"
 // import path from "path"
-import configData from "../../static/layoutConfig.js"
+import configData from '../ConfigData/index'
 
 export const routeRegister = {}
 
